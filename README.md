@@ -9,7 +9,7 @@
 2. producer와 consumer를 각각 실행시킨다.
 3. 아래의 api를 통해 요청을 보낸다.
  
-```aidl
+```
 Method : Get,
 Url : http://localhost:8080/generate,
 Parameter: message(string), age(int)
