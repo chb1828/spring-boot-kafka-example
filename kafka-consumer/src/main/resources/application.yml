@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  kafka:
+    consumer:
+      group-id: message_group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      bootstrap-servers: localhost:9092
+      properties.spring.json.trusted.packages: "*"
+      properties.spring.json.type.mapping: "message:com.example.kafkaconsumer.model.Message"
+
